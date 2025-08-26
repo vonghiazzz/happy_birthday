@@ -9,6 +9,11 @@
     <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
 </head>
 <body>
+    <audio id="birthdayMusic" autoplay loop muted>
+        <source src="./music/happy-birthday.mp3" type="audio/mpeg">
+    </audio>
+
+
     <div id="wrapper">
         <div class="flag__birthday">
             <img src="./images/1.png" alt="" width="350" class="flag__left">
@@ -54,11 +59,11 @@
             <div class="right">
                 <div class="box__account">
                     <div class="image">
-                        <image src="./images/CBT.jpg" alt="" width="100">  
+                        <image src="./images/TrucLy.jpg" alt="" width="100">  
                     </div>
                     <div class="name">
                         <i class="fa-solid fa-heart"></i>
-                       CB Tuyền</span>
+                       Trúc Ly</span>
                         <i class="fa-solid fa-heart"></i>
                     </div>
                     <div class="balloon_one">
@@ -149,9 +154,9 @@
     </div>
 </body>
 <script>
-    let datetxt = "23/08/2002";
+    let datetxt = "26/08/2001";
     let datatxtletter = "Happy birthday! Wishing you a day filled with joy, laughter, and wonderful memories 💕";
-    let titleLetter = "Dear Tuyền :)))";
+    let titleLetter = "Dear Trúc Ly :)))";
     let charArrDate = datetxt.split('');
     let charArrDateLetter = datatxtletter.split('');
     let charArrTitle = titleLetter.split('');
@@ -267,4 +272,13 @@
     }
     
 </script>
+<script>
+  window.addEventListener("DOMContentLoaded", () => {
+    const music = document.getElementById("birthdayMusic");
+    document.body.addEventListener("click", () => {
+      music.play();
+    }, { once: true }); // chỉ cần click 1 lần
+  });
+</script>
+
 </html>
